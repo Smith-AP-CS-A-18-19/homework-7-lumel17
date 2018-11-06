@@ -4,7 +4,13 @@ public class Homework7 {
 	 * from 1 to x and return the result
 	 */
 	public static int problem1(int x) {
-
+			int sum = 0;
+			int i = 1;
+			while (i <= x) {
+					sum += i;
+					i += 1;
+			}
+			return sum;
 	}
 
 	/* Use a loop (while or for) to find the
@@ -14,7 +20,15 @@ public class Homework7 {
 	 * use that method, you must use a loop
 	 */
 	public static int problem2(String s, String t) {
-
+			int i = 0;
+			while (i <= s.length() - t.length()) {
+					String sub = s.substring(i, t.length() + i );
+					if (sub.equals(t)) {
+							return i;
+					}
+					i++;
+			}
+			return -1;
 	}
 
 	/* Use a loop (while or for) to calculate and
@@ -22,15 +36,26 @@ public class Homework7 {
 	 * power
 	 */
 	public static int problem3(int a, int b) {
-
-	}
+			int i = 1;
+			int i2 = 0;
+			while (i2 < b) {
+					i *= a;
+					i2++;
+				}
+					return i;
+			}
 
 	/* Use a loop (while or for) to calculate and
 	 * return the integer portion of a divided by
 	 * b (i.e., calculate a / b using a loop)
 	 */
 	public static int problem4(int a, int b) {
-
+			int num = 0;
+			while (a > b) {
+					a = a - b;
+					num++;
+			}
+			return num;
 	}
 
 	/* Use a loop (while or for) to calculate and
@@ -38,7 +63,10 @@ public class Homework7 {
 	 * (i.e., calculate a % b using a loop)
 	 */
 	 public static int problem5(int a, int b) {
-
+		 	while (a >= b) {
+					a = a - b;
+			}
+			return a;
 	 }
 
 	public static void main(String[] args) {
